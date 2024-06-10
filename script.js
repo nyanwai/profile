@@ -46,7 +46,6 @@ function updateViewCounter() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', updateViewCounter);
 
 
 
