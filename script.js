@@ -43,9 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewCountElement = document.getElementById('view-count');
 
     if (counterElement && viewCountElement) {
-        viewCountElement.innerText = counterElement.innerText;
+        viewCountElement.innerHTML = counterElement.innerHTML || '0';
     }
 });
+
 
 
 
