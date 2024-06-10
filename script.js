@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("View Count Element:", viewCountElement);
             console.log("Counter Element Text Content:", counterElement.innerText);
 
-            viewCountElement.innerText = counterElement.innerText || 'views not loaded';
+            viewCountElement.innerText = counterElement.innerText || 'views not loaded'; // should display 'views not loaded'
         } else {
             console.error('Counter element or view count element not found.');
         }
