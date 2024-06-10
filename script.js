@@ -39,13 +39,26 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const counterElement = document.querySelector('[data-id="fd011bcf-b669-4d42-9fd9-b82353653704"]');
-    const viewCountElement = document.getElementById('view-count');
+    function updateViewCount() {
+        const counterElement = document.querySelector('[data-id="fd011bcf-b669-4d42-9fd9-b82353653704"]');
+        const viewCountElement = document.getElementById('view-count');
 
-    if (counterElement && viewCountElement) {
-        viewCountElement.innerHTML = counterElement.innerHTML || '0';
+        if (counterElement && viewCountElement) {
+            console.log("Counter Element:", counterElement);
+            console.log("View Count Element:", viewCountElement);
+            console.log("Counter Element Text Content:", counterElement.innerText);
+
+            viewCountElement.innerText = counterElement.innerText || 'views not loaded';
+        } else {
+            console.error('Counter element or view count element not found.');
+        }
     }
+
+    // Call the function
+    updateViewCount();
 });
+
+
 
 
 
