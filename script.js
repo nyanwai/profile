@@ -37,32 +37,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
     animateText();
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    function updateViewCount() {
-        const counterElement = document.querySelector('[data-id="fd011bcf-b669-4d42-9fd9-b82353653704"]');
-        const viewCountElement = document.getElementById('view-count');
-
-        if (counterElement && viewCountElement) {
-            console.log("Counter Element:", counterElement);
-            console.log("View Count Element:", viewCountElement);
-            console.log("Counter Element Text Content:", counterElement.innerText);
-
-            viewCountElement.innerText = counterElement.innerText || 'views not loaded'; // should display 'views not loaded'
-        } else {
-            console.error('Counter element or view count element not found.');
-        }
-    }
-
-    // Call the function
-    updateViewCount();
-});
-
-
-
-
-
-
-
-
-
