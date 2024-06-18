@@ -35,5 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(eraseText, eraseSpeed);
     }
 
+    let counterLabel = document.querySelector('.counter-text')
+    fetch('http://counters.nyawtism.com/inc/nyawaiGithubVisitorCounter')
+    .then(response => response.json())
+    .then(data => { counterLabel.innerHTML = data.visitors })
+
     animateText();
 });
