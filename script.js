@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     let counterLabel = document.querySelector('.counter-text')
-    fetch('http://counters.nyawtism.com/inc/nyawaiGithubVisitorCounter')
+    fetch('https://nyawtism.com/counters/inc/nyawaiGithubVisitorCounter')
     .then(response => response.json())
     .then(data => { counterLabel.innerHTML = data.visitors })
 
